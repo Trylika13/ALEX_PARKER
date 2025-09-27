@@ -23,7 +23,7 @@ LA LISTE DES CATEGORIES DANS LE MENU
 BONUS: 
 	- afficher le nombre de posts pour chaque catégorie dans la liste des catégories
 	- Pagination 
-	- upload de l'image d'un post
+	- upload de l'image d'un post (nous-meme, pour un nouveau post)
 
 
 ROUTES

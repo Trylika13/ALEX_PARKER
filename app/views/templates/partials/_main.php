@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-12 content-page">
                             <!-- ADD A POST -->
-                            <?php include_once '../app/views/templates/partials/_addpost.php' ?>
+
                             <!-- ADD A POST END -->
                             <!-- Blog Post Start -->
                             <?php echo $content ?>
