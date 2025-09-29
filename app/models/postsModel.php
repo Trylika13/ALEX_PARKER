@@ -45,3 +45,20 @@ function updateOneById(PDO $connexion, int $id, string $title, string $text, str
         ':id'          => $id
     ]);
 }
+
+function create(PDO $connexion, array $data)
+{
+    $sql = "INSERT INTO posts 
+            SET 
+            title = :title,
+            `text` = :text,
+            quote = :quote,
+            category_id = :category_id,
+            created_at = NOW();";
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':title', $data['title'], PDO::PARAM_STR);
+    $rs->bindValue(':text', $data['text'], PDO::PARAM_STR);
+    $rs->bindValue(':quote', $data['quote'], PDO::PARAM_STR);
+    $rs->bindValue(':category_id', $data['category_id'], PDO::PARAM_INT);
+    return $rs->execute();
+}

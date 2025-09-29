@@ -2,7 +2,7 @@
 
 namespace App\Controllers\PostsController;
 
-use \PDO;
+use \PDO, \App\Models\PostsModel;
 
 function indexAction(PDO $connexion)
 {
@@ -61,5 +61,36 @@ function updateAction(PDO $connexion, int $id)
 
     include_once '../app/models/postsModel.php';
     \App\Models\PostsModel\updateOneById($connexion, $id, $title, $text, $quote, $category_id);
-    header('location: ' . PUBLIC_BASE_URL . 'posts');
+    header('Location: ' . PUBLIC_BASE_URL . '/index.php?posts=show&id=' . $id);
+}
+
+function newAction(PDO $connexion)
+{
+    include_once '../app/models/categoriesModel.php';
+    $categories = \App\Models\CategoriesModel\findAll($connexion);
+
+    global $title, $content;
+    $title = "Add a post";
+    ob_start();
+    include '../app/views/posts/new.php';
+    $content = ob_get_clean();
+}
+
+function createAction(PDO $connexion)
+{
+    $title       = $_POST['title'] ?? '';
+    $text        = $_POST['text'] ?? '';
+    $quote       = $_POST['quote'] ?? '';
+    $category_id = (int)($_POST['category_id'] ?? 0);
+
+    include_once '../app/models/postsModel.php';
+    \App\Models\PostsModel\create($connexion, [
+        'title'       => $title,
+        'text'        => $text,
+        'quote'       => $quote,
+        'category_id' => $category_id
+    ]);
+
+    header('Location: ' . PUBLIC_BASE_URL . 'index.php?posts=index');
+    exit;
 }

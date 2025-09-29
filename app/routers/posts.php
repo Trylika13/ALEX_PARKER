@@ -16,6 +16,12 @@ switch ($_GET['posts']):
     case 'update':
         PostsController\updateAction($connexion, $_GET['id']);
         break;
+    case 'new':
+        PostsController\newAction($connexion);
+        break;
+    case 'create':
+        PostsController\createAction($connexion);
+        break;
     default:
         PostsController\indexAction($connexion);
         break;

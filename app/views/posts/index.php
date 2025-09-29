@@ -1,5 +1,5 @@
 <div>
-    <a href="posts/new" type="button" class="btn btn-primary">Add a Post</a>
+    <a href="?posts=new" type="button" class="btn btn-primary">Add a Post</a>
 </div>
 
 <?php foreach ($posts as $post): ?>

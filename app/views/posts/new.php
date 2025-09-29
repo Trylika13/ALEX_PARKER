@@ -15,7 +15,7 @@
              <!-- Post Headline End -->
 
              <!-- Form Start -->
-             <form action="">
+             <form action="index.php?posts=create" method="post">
                  <div class="form-group">
                      <label for="title">Title</label>
                      <input
@@ -48,18 +48,17 @@
                          placeholder="Enter your quote here"></textarea>
                  </div>
                  <div class="form-group">
-                     <label for="text">Category</label>
-                     <select
-                         id="category"
-                         name="category_id"
-                         class="form-control">
-                         <option disabled selected>
-                             Select your category
-                         </option>
-                         <option value="1">Life style</option>
-                         <option value="2">Sport</option>
+                     <label for="category">Category</label>
+                     <select id="category" name="category_id" class="form-control" required>
+                         <option value="" disabled selected>Select your category</option>
+                         <?php foreach ($categories as $category): ?>
+                             <option value="<?php echo $category['id']; ?>">
+                                 <?php echo $category['name']; ?>
+                             </option>
+                         <?php endforeach; ?>
                      </select>
                  </div>
+
                  <div>
                      <input
                          class="btn btn-primary"
