@@ -1,3 +1,6 @@
+<base href="/25-26/SCRIPTS%20SERVEUR/ALEX_PARKER/public/">
+
+
 <!-- Meta Tag -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

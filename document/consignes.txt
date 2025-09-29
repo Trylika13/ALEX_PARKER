@@ -31,14 +31,14 @@ ROUTES
 		PATTERN: /
 		CTRL: ???
 		ACTION: ???
-		TITLE: Alex Parker - Blog
+		TITLE: Alex Parker - Blog							OK
 
 	ROUTE DU DETAIL D'UN POST
 			PATTERN: /posts/id/slug-du-post.html
 			URL: ???
 			CTRL: ???
 			ACTION: ???
-			TITLE: Alex Parker - Title du post
+			TITLE: Alex Parker - Title du post				OK
 
 	ROUTE D'AJOUT D'UN POST: affichage du formulaire
 			PATTERN: /posts/add/form.html

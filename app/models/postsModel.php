@@ -6,7 +6,7 @@ use \PDO;
 
 function findAll(PDO $connexion): array
 {
-    $sql = "SELECT p.*, c.name AS category_name
+    $sql = "SELECT p.*, c.name AS category_name, c.id as category_id
             FROM posts p
             JOIN categories c on c.id = p.category_id
             ORDER BY p.created_at DESC
@@ -24,4 +24,24 @@ function findOneById(PDO $connexion, int $id): array
     $rs->bindValue(':id', $id, PDO::PARAM_INT);
     $rs->execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
+}
+
+function updateOneById(PDO $connexion, int $id, string $title, string $text, string $quote, int $category_id): bool
+
+{
+    $sql = "UPDATE posts
+            SET title = :title,
+                `text` = :text,
+                quote = :quote,
+                category_id = :category_id
+            WHERE id = :id";
+
+    $stmt = $connexion->prepare($sql);
+    return $stmt->execute([
+        ':title'       => $title,
+        ':text'        => $text,
+        ':quote'       => $quote,
+        ':category_id' => $category_id,
+        ':id'          => $id
+    ]);
 }

@@ -1,6 +1,6 @@
  <footer>
      <ul class="menu-link">
-         <li><a href="index.html">My Blog</a></li>
+         <li><a href="<?php echo PUBLIC_BASE_URL ?>">My Blog</a></li>
      </ul>
 
      <p>© Copyright 2016 DevBlog. All rights reserved</p>

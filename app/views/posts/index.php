@@ -6,7 +6,7 @@
 
     <div class="col-md-12 blog-post row">
         <div class="post-title">
-            <a href="single.html">
+            <a href="?posts=show&id=<?php echo $post['id'] ?>">
                 <h1>
                     <?php echo $post['title'] ?>
                 </h1>

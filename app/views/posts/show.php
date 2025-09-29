@@ -1,5 +1,5 @@
  <div class="sub-title">
-     <a href="index.html" title="Go to Home Page">
+     <a href="<?php echo PUBLIC_BASE_URL ?>" title="Go to Home Page">
          <h2>Back Home</h2>
      </a>
      <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
@@ -37,7 +37,7 @@
 
      <!-- Post Buttons -->
      <div>
-         <a href="form.html" type="button" class="btn btn-primary">Edit Post</a>
+         <a href="?posts=edit&id=<?php echo $post['id'] ?>" type="button" class="btn btn-primary">Edit Post</a>
          <a
              href="#"
              type="button"

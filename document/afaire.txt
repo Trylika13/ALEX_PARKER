@@ -1,0 +1,4 @@
+ne pas oublier :
+    - faire le htaccess et de modifier toutes les liens de boutons d'accès 
+    - les catégories du posts/edit
+    - regarder correctement pour réarranger mon template
