@@ -12,12 +12,12 @@ ALEX PARKER - CONSIGNES
 		- title, text, categorie et quote du post  OK
 		- lien pour la modification et la suppression du post OK
 
-	3. Formulaire d'ajout et de modification d'un post
+	3. Formulaire d'ajout et de modification d'un post OK
 		- title, text, image, categorie et quote du post OK
 
 LA LISTE DES CATEGORIES DANS LE MENU
-	Ajouter la liste des catégories dans la colonne de gauche (présente sur chaque page)
-	Vous ne devez pas activer ces liens, juste les afficher !!!
+	Ajouter la liste des catégories dans la colonne de gauche (présente sur chaque page) OK
+	Vous ne devez pas activer ces liens, juste les afficher !!! OK
 	(Pas de routes pour les catégories)   OK
 
 BONUS: 
@@ -44,28 +44,28 @@ ROUTES
 			PATTERN: /posts/add/form.html
 			CTRL: ???
 			ACTION: ???
-			TITLE: Alex Parker - Add a post
+			TITLE: Alex Parker - Add a post					OK
 
 	ROUTE D'AJOUT D'UN POST: INSERT
 			PATTERN: /posts/add/insert.html
 			CTRL: ???
 			ACTION: ???
-			PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL
+			PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL  OK
 
 	ROUTE DE MODIFICATION D'UN POST: Affichage du formulaire
 			PATTERN: /posts/id/slug-du-post/edit/form.html
 			CTRL: ???
 			ACTION: ???
-			TITLE: Alex Parker - Edit a post
+			TITLE: Alex Parker - Edit a post   OK
 
 	ROUTE DE MODIFICATION D'UN POST: UPDATE
 			PATTERN: /posts/id/slug-du-post/edit/update.html
 			CTRL: ???
 			ACTION: ???
-			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST
+			PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST   OK
 
 	ROUTE DE SUPPRESSION D'UN POST:
 			PATTERN: /posts/id/slug-du-post/delete.html
 			CTRL: ???
 			ACTION: ???
-			PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL
+			PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL   OK

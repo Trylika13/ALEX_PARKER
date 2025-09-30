@@ -51,17 +51,16 @@
                  </div>
 
                  <div class="form-group">
-                     <?php $currentId = $post['category_id']; ?>
-
                      <label for="category">Category</label>
                      <select id="category" name="category_id" class="form-control">
                          <?php foreach ($categories as $category): ?>
-                             <option value="<?php echo $category['id']; ?>" <?php echo $category['id'] == $currentId ? 'selected' : ''; ?>>
-                                 <?php echo $category['name']; ?>
+                             <option value="<?= $category['id']; ?>" <?= ($category['id'] == $post['category_id']) ? 'selected' : ''; ?>>
+                                 <?= $category['name']; ?>
                              </option>
                          <?php endforeach; ?>
                      </select>
                  </div>
+
                  <div>
                      <input
                          class="btn btn-primary"

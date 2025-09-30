@@ -26,8 +26,7 @@ function findOneById(PDO $connexion, int $id): array
     return $rs->fetch(PDO::FETCH_ASSOC);
 }
 
-function updateOneById(PDO $connexion, int $id, string $title, string $text, string $quote, int $category_id): bool
-
+function updateOneById(PDO $connexion, int $id, array $data)
 {
     $sql = "UPDATE posts
             SET title = :title,
@@ -36,15 +35,16 @@ function updateOneById(PDO $connexion, int $id, string $title, string $text, str
                 category_id = :category_id
             WHERE id = :id";
 
-    $stmt = $connexion->prepare($sql);
-    return $stmt->execute([
-        ':title'       => $title,
-        ':text'        => $text,
-        ':quote'       => $quote,
-        ':category_id' => $category_id,
+    $rs = $connexion->prepare($sql);
+    return $rs->execute([
+        ':title'       => $data['title'],
+        ':text'        => $data['text'],
+        ':quote'       => $data['quote'],
+        ':category_id' => $data['category_id'],
         ':id'          => $id
     ]);
 }
+
 
 function create(PDO $connexion, array $data)
 {

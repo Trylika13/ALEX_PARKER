@@ -45,7 +45,7 @@ function editAction(PDO $connexion, int $id)
 
     // Je chrage la vue '' dans $content
     global $content, $title;
-    $title = ['Edit a post'];
+    $title = "Edit a post";
     ob_start();
     include '../app/views/posts/edit.php';
     $content = ob_get_clean();
@@ -60,9 +60,8 @@ function updateAction(PDO $connexion, int $id)
     $category_id  = (int)($_POST['category_id'] ?? 0);
 
     include_once '../app/models/postsModel.php';
-    \App\Models\PostsModel\updateOneById($connexion, $id, $title, $text, $quote, $category_id);
+    \App\Models\PostsModel\updateOneById($connexion, $_GET['id'], $_POST);;
     header('Location: ' . PUBLIC_BASE_URL . 'posts/' . $id . '/' . \Core\Helpers\slugify($title) . '.html');
-    exit;
 }
 
 function newAction(PDO $connexion)
