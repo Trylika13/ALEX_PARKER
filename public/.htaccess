@@ -1,11 +1,59 @@
+# Activation du module de réécriture
 RewriteEngine on
 
 # ROUTES
 
-# posts.show
-# URL: posts/id/slug
-# PATTERN: ?posts=show&id=x
-RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*$ index.php?posts=show&id=$1 [L]
+       		#ROUTE PAR DEFAUT: liste des posts
+			#PATTERN: /
+			#CTRL: ???
+			#ACTION: ???
+			#TITLE: Alex Parker - Blog
+						
+
+	#ROUTE DU DETAIL D'UN POST
+			
+			#URL: ???
+			#CTRL: ???
+			#ACTION: ???
+			#TITLE: Alex Parker - Title du post				
+            RewriteRule ^posts/([0-9]+)/([a-z0-9\-]+)\.html$ index.php?posts=show&id=$1 [L]
+
+	#ROUTE D'AJOUT D'UN POST: affichage du formulaire
+			#PATTERN: /posts/add/form.html
+			#CTRL: ???
+			#ACTION: ???
+			#TITLE: Alex Parker - Add a post
+            RewriteRule ^posts/add/form\.html$ index.php?posts=new [L]
+
+
+	#ROUTE D'AJOUT D'UN POST: INSERT
+			#PATTERN: /posts/add/insert.html
+			#CTRL: ???
+			#ACTION: ???
+			#PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL
+            RewriteRule ^posts/add/insert\.html$ index.php?posts=create [L]
+
+	#ROUTE DE MODIFICATION D'UN POST: Affichage du formulaire
+			#PATTERN: /posts/id/slug-du-post/edit/form.html
+			#CTRL: ???
+			#ACTION: ???
+			#TITLE: Alex Parker - Edit a post
+            RewriteRule ^posts/([0-9]+)/([a-z0-9\-]+)/edit/form\.html$ index.php?posts=edit&id=$1 [L]
+
+	#ROUTE DE MODIFICATION D'UN POST: UPDATE
+			#PATTERN: /posts/id/slug-du-post/edit/update.html
+			#CTRL: ???
+			#ACTION: ???
+			#PAS DE TITLE CAR REDIRECTION VERS LA PAGE DE DETAILS DU POST
+            RewriteRule ^posts/([0-9]+)/([a-z0-9\-]+)/edit/update\.html$ index.php?posts=update&id=$1 [L]
+	#ROUTE DE SUPPRESSION D'UN POST:
+			#PATTERN: /posts/id/slug-du-post/delete.html
+			#CTRL: ???
+			#ACTION: ???
+			#PAS DE TITLE CAR REDIRECTION VERS LA PAGE D'ACCUEIL
+            RewriteRule ^posts/([0-9]+)/([a-z0-9\-]+)/delete\.html$ index.php?posts=destroy&id=$1 [L]
+
+
 
 
 # --------------------------------------------------

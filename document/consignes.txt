@@ -2,26 +2,26 @@ ALEX PARKER - CONSIGNES
 
 3 PAGES :
 	1. My Blog (page par défaut) :
-		- Liste des posts du blog triés par date décroissante et limités à 10
-		- Texte tronqué à 150 caractères
-		- Date formatée
-		- Lien vers le détails d'un post
-		- Lien vers le formulaire d'ajout d'un post
+		- Liste des posts du blog triés par date décroissante et limités à 10 OK
+		- Texte tronqué à 150 caractères OK
+		- Date formatée OK 
+		- Lien vers le détails d'un post OK
+		- Lien vers le formulaire d'ajout d'un post OK
 
 	2. Détails d'un post
-		- title, text, categorie et quote du post
-		- lien pour la modification et la suppression du post
+		- title, text, categorie et quote du post  OK
+		- lien pour la modification et la suppression du post OK
 
 	3. Formulaire d'ajout et de modification d'un post
-		- title, text, image, categorie et quote du post
+		- title, text, image, categorie et quote du post OK
 
 LA LISTE DES CATEGORIES DANS LE MENU
 	Ajouter la liste des catégories dans la colonne de gauche (présente sur chaque page)
 	Vous ne devez pas activer ces liens, juste les afficher !!!
-	(Pas de routes pour les catégories)
+	(Pas de routes pour les catégories)   OK
 
 BONUS: 
-	- afficher le nombre de posts pour chaque catégorie dans la liste des catégories
+	- afficher le nombre de posts pour chaque catégorie dans la liste des catégories OK
 	- Pagination 
 	- upload de l'image d'un post (nous-meme, pour un nouveau post)
 

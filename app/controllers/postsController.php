@@ -61,7 +61,8 @@ function updateAction(PDO $connexion, int $id)
 
     include_once '../app/models/postsModel.php';
     \App\Models\PostsModel\updateOneById($connexion, $id, $title, $text, $quote, $category_id);
-    header('Location: ' . PUBLIC_BASE_URL . '/index.php?posts=show&id=' . $id);
+    header('Location: ' . PUBLIC_BASE_URL . 'posts/' . $id . '/' . \Core\Helpers\slugify($title) . '.html');
+    exit;
 }
 
 function newAction(PDO $connexion)
@@ -91,8 +92,7 @@ function createAction(PDO $connexion)
         'category_id' => $category_id
     ]);
 
-    header('Location: ' . PUBLIC_BASE_URL . 'index.php?posts=index');
-    exit;
+    header('Location: ' . PUBLIC_BASE_URL);
 }
 
 function deleteAction(PDO $connexion, int $id)
@@ -100,5 +100,5 @@ function deleteAction(PDO $connexion, int $id)
     include_once '../app/models/postsModel.php';
     \App\Models\PostsModel\deleteOneById($connexion, $id);
 
-    header('Location: ' . PUBLIC_BASE_URL . 'index.php?posts=index');
+    header('Location: ' . PUBLIC_BASE_URL);
 }

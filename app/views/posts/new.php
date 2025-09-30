@@ -15,7 +15,7 @@
              <!-- Post Headline End -->
 
              <!-- Form Start -->
-             <form action="index.php?posts=create" method="post">
+             <form action="posts/add/insert.html" method="post">
                  <div class="form-group">
                      <label for="title">Title</label>
                      <input

@@ -7,9 +7,10 @@
             </ul>
         </nav>
         <ul class="menu-link">
-            <li><a href="index.html">Life style [12]</a></li>
-            <li><a href="index.html">Sport[23]</a></li>
-            <li><a href="index.html">Music[46]</a></li>
+            <?php foreach ($categories as $category): ?>
+                <li><a href="#"><?php echo $category['name'] ?>[<?php echo $category['post_count'] ?>]</a></li>
+            <?php endforeach ?>
+
         </ul>
     </div>
 

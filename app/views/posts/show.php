@@ -37,9 +37,9 @@
 
      <!-- Post Buttons -->
      <div>
-         <a href="?posts=edit&id=<?php echo $post['id'] ?>" type="button" class="btn btn-primary">Edit Post</a>
+         <a href="posts/<?php echo $post['id']; ?>/<?php echo \Core\Helpers\slugify($post['title']); ?>/edit/form.html" type="button" class="btn btn-primary">Edit Post</a>
          <a
-             href="?posts=destroy&id=<?php echo $post['id'] ?>"
+             href="posts/<?php echo $post['id']; ?>/<?php echo \Core\Helpers\slugify($post['title']); ?>/delete.html"
              type="button"
              class="btn btn-secondary"
              role="button">Delete Post</a>

@@ -1,4 +1,8 @@
 <?php
+include_once '../core/helpers.php';
+// Charger toutes les catégories pour l'aside
+include_once '../app/models/categoriesModel.php';
+$categories = \App\Models\CategoriesModel\findAll($connexion);
 
 //  Route des posts
 
