@@ -94,3 +94,11 @@ function createAction(PDO $connexion)
     header('Location: ' . PUBLIC_BASE_URL . 'index.php?posts=index');
     exit;
 }
+
+function deleteAction(PDO $connexion, int $id)
+{
+    include_once '../app/models/postsModel.php';
+    \App\Models\PostsModel\deleteOneById($connexion, $id);
+
+    header('Location: ' . PUBLIC_BASE_URL . 'index.php?posts=index');
+}

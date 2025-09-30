@@ -1,4 +1,5 @@
-<base href="/25-26/SCRIPTS%20SERVEUR/ALEX_PARKER/public/">
+<base href="<?php echo PUBLIC_BASE_URL; ?>">
+
 
 
 <!-- Meta Tag -->

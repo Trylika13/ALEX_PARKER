@@ -62,3 +62,12 @@ function create(PDO $connexion, array $data)
     $rs->bindValue(':category_id', $data['category_id'], PDO::PARAM_INT);
     return $rs->execute();
 }
+
+
+function deleteOneById(PDO $connexion, int $id)
+{
+    $sql = "DELETE FROM posts WHERE ID = :id";
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':id', $id, PDO::PARAM_INT);
+    return $rs->execute();
+}

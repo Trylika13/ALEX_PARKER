@@ -39,7 +39,7 @@
      <div>
          <a href="?posts=edit&id=<?php echo $post['id'] ?>" type="button" class="btn btn-primary">Edit Post</a>
          <a
-             href="#"
+             href="?posts=destroy&id=<?php echo $post['id'] ?>"
              type="button"
              class="btn btn-secondary"
              role="button">Delete Post</a>

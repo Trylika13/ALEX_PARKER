@@ -22,6 +22,9 @@ switch ($_GET['posts']):
     case 'create':
         PostsController\createAction($connexion);
         break;
+    case 'destroy':
+        PostsController\deleteAction($connexion, $_GET['id']);
+        break;
     default:
         PostsController\indexAction($connexion);
         break;
